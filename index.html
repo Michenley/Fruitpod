@@ -5,6 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fruitpod</title>
+
+    <!-- 🔥 Google Analytics 4 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXS53ZX91N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CXS53ZX91N');
+    </script>
+    <!-- END GA4 -->
+
     <meta
       name="description"
       content="Fruitpod serves fresh fruit bowls, parfaits, juices and smoothies – bright, playful and made from real seasonal fruit."
@@ -16,6 +28,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fruitpod.example.com" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,10 +36,14 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div id="root"></div>
 
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dc43fcad0710403499939ba140e2c3f5"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dc43fcad0710403499939ba140e2c3f5"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
