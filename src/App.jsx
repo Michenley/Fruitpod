@@ -1,17 +1,17 @@
-// src/App.jsx
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
 import Order from "./pages/Order";
 import Product from "./pages/Product";
+import Admin from "./pages/Admin";
 
 export default function App() {
   const location = useLocation();
@@ -19,8 +19,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"
@@ -62,9 +61,17 @@ export default function App() {
               </PageTransition>
             }
           />
+          {/* 👇 NEW: admin route */}
+          <Route
+            path="/admin"
+            element={
+              <PageTransition>
+                <Admin />
+              </PageTransition>
+            }
+          />
         </Routes>
       </AnimatePresence>
-
       <Footer />
       <ScrollToTop />
     </>
